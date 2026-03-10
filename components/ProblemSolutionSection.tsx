@@ -33,9 +33,12 @@ export default function ProblemSolutionSection() {
         </div>
 
         {/* Comparison cards */}
-        <div className=" flex  justify-center items-center gap-4" dir="ltr">
+        <div
+          className="flex flex-col lg:flex-row justify-center items-stretch gap-4"
+          dir="ltr"
+        >
           {/* With Janbik - green */}
-          <div className="rounded-xl w-108 border border-janbik-green/30 bg-janbik-green-light p-5 flex flex-col gap-4">
+          <div className="rounded-xl w-full lg:w-108 border border-janbik-green/30 bg-janbik-green-light p-5 flex flex-col gap-4">
             {/* Card header */}
             
             <div className="flex items-center justify-between gap-3">
@@ -134,7 +137,7 @@ export default function ProblemSolutionSection() {
           </div>
 
           {/* Without Janbik - red */}
-          <div className="rounded-xl w-108 border border-janbik-red/30 bg-janbik-red-light p-5 flex flex-col gap-4">
+          <div className="rounded-xl w-full lg:w-108 border border-janbik-red/30 bg-janbik-red-light p-5 flex flex-col gap-4">
             {/* Card header */}
             <div className="flex items-center justify-between gap-3">
                {/* Trending down icon */}

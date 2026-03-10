@@ -1,245 +1,210 @@
-import type { ReactNode } from "react";
-
-interface Step {
-  number: string;
-  color: string;
-  borderColor: string;
-  textColor: string;
-  bgColor: string;
-  title: string;
-  description: string;
-  icon: ReactNode;
-}
-
-const steps: Step[] = [
+const steps = [
   {
     number: "1",
-    color: "#16B9F2",
-    borderColor: "border-[#16B9F2]",
-    textColor: "text-[#16B9F2]",
-    bgColor: "bg-[#16B9F2]",
-    title: "سوار ذكي",
-    description:
-      "يرتدي طفلك سوارًا مريحًا يساعد فريق الرعاية على متابعة حالته ونشاطه طوال اليوم. هذا يمنحنا تنبيهًا سريعًا عند الحاجة، ويمنحك أنت راحة أكبر.",
-    icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M20 30C25.5228 30 30 25.5228 30 20C30 14.4772 25.5228 10 20 10C14.4772 10 10 14.4772 10 20C10 25.5228 14.4772 30 20 30Z"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M20 16.6665V19.9998L21.6667 21.6665"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M26.8829 12.7665L25.5329 6.01646C25.3805 5.24914 24.9631 4.55987 24.3537 4.0693C23.7443 3.57874 22.9818 3.31814 22.1996 3.33313H17.7329C16.9508 3.31814 16.1882 3.57874 15.5789 4.0693C14.9695 4.55987 14.552 5.24914 14.3996 6.01646L13.0996 12.7665"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M13.1328 27.2664L14.4661 33.9331C14.6186 34.7004 15.036 35.3897 15.6454 35.8803C16.2548 36.3708 17.0173 36.6314 17.7995 36.6164H22.3328C23.115 36.6314 23.8775 36.3708 24.4869 35.8803C25.0963 35.3897 25.5137 34.7004 25.6661 33.9331L27.0161 27.1831"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
+    title: "سجّل الآن",
+    description: "تعبئة بياناتك الأساسية بسرعة",
   },
   {
     number: "2",
-    color: "#C099FF",
-    borderColor: "border-[#C099FF]",
-    textColor: "text-[#C099FF]",
-    bgColor: "bg-[#C099FF]",
-    title: "مركز المتابعة الذكي",
-    description:
-      "تصل المعلومات مباشرة إلى مركز المتابعة، ليكون فريق الرعاية على اطّلاع دائم بكل جديد. بهذه الطريقة، تصبح المتابعة أسرع، ويكون التعامل مع أي ملاحظة أكثر دقة.",
-    icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M29.1663 31.6668H14.9996C12.8361 31.6663 10.7153 31.0641 8.87424 29.9276C7.03322 28.7911 5.54448 27.1651 4.5744 25.2312C3.60432 23.2973 3.19111 21.1317 3.38094 18.9765C3.57077 16.8213 4.35616 14.7613 5.64936 13.0268C6.94256 11.2923 8.69261 9.95149 10.704 9.15431C12.7153 8.35713 14.9087 8.13495 17.039 8.5126C19.1694 8.89026 21.1527 9.85286 22.7675 11.2928C24.3823 12.7328 25.5648 14.5935 26.1829 16.6668H29.1663C31.1554 16.6668 33.0631 17.457 34.4696 18.8635C35.8761 20.2701 36.6663 22.1777 36.6663 24.1668C36.6663 26.156 35.8761 28.0636 34.4696 29.4701C33.0631 30.8767 31.1554 31.6668 29.1663 31.6668Z"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
+    title: "سيتواصل معك أحد من الفريق",
+    description: "لتأكيد التسجيل والإجابة على أي سؤال",
   },
   {
     number: "3",
-    color: "#FF7A45",
-    borderColor: "border-[#FF7A45]",
-    textColor: "text-[#FF7A45]",
-    bgColor: "bg-[#FF7A45]",
-    title: "تطبيق الأهل",
-    description:
-      "يصلك كل جديد عن طفلك بسهولة عبر التطبيق، من التحديثات اليومية إلى التنبيهات المهمة. حتى عندما تكون بعيدًا، تبقى قريبًا ومطمئنًا على تفاصيل يومه.",
-    icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M28.334 3.3335H11.6673C9.82637 3.3335 8.33398 4.82588 8.33398 6.66683V33.3335C8.33398 35.1744 9.82637 36.6668 11.6673 36.6668H28.334C30.1749 36.6668 31.6673 35.1744 31.6673 33.3335V6.66683C31.6673 4.82588 30.1749 3.3335 28.334 3.3335Z"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M20 30H20.0167"
-          stroke="white"
-          strokeWidth="3.33333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
+    title: "أضف تفاصيل طفلك",
+    description: "العمر، الحساسية، الصحة، ملاحظات مهمة",
+  },
+  {
+    number: "4",
+    title: "تم التسجيل بنجاح",
+    description: "حدّد الأشخاص المصرّح لهم باستلام الطفل لضمان الأمان",
   },
 ];
+
+const ROOM_IMAGE =
+  "https://cdn.builder.io/api/v1/image/assets%2F390804c7b5e744488dbce5bba99161e9%2F23da66cb517845769ce8fd6b4f0c5bd3?format=webp&width=800&height=1200";
+const FLOWER_IMAGE =
+  "https://api.builder.io/api/v1/image/assets/TEMP/184ceee95f276fc3a7443ca573f4ef2a7328321e?width=246";
+const PLANE_IMAGE =
+  "https://api.builder.io/api/v1/image/assets/TEMP/e84d62a9cae231497a41b4e108de210e293b1239?width=244";
+
+// Shared step gap height so vertical line can be calculated
+const STEP_GAP = 32; // gap-8 = 32px
+const CIRCLE_SIZE = 64;
 
 export default function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="py-20 lg:py-28 bg-transparent"
       dir="rtl"
+      className="py-14"
+      style={{
+        background: "rgba(0, 153, 153, 0.05)",
+        fontFamily: "'Cairo', sans-serif",
+      }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-janbik-dark tracking-tight mb-4">
-           
-         كيف يعمل سوارك جنبك الذكي
-         ؟
-          </h2>
+      <div className="px-6 sm:px-12    lg:px-20 flex flex-col items-center gap-11">
+        {/* ─── Title ─── */}
+        <h2
+          className="text-[#2D3749] text-center text-2xl font-bold "
+         
+        >
+          الانضمام سهل… وخلال دقائق تبدأ الطمأنينة
+        </h2>
 
-          <p className="text-janbik-gray text-base max-w-xl mx-auto leading-relaxed">
-           نتابع يوم طفلك باهتمام،ونبقيك علي اطلاع دايم ،لتشعر بالراحه والطمانينه في كل لحظه
-          </p>
-        </div>
+        {/* ─── Content row: steps + photo ─── */}
+        <div className="flex flex-col items-center w-full gap-10">
+          <div className="w-full max-w-9xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+            {/* ══ RIGHT: Steps ══ */}
+            <div className="w-full max-w-3xl relative lg:py-2">
+            {/*
+              Vertical grey line from center of circle-1 to center of circle-4.
+              Top offset = CIRCLE_SIZE/2 = 32px
+              Bottom offset = CIRCLE_SIZE/2 = 32px
+            */}
+            <div
+              aria-hidden
+              className="absolute bg-[#9CA3AF] pointer-events-none"
+              style={{
+                right: CIRCLE_SIZE / 2,
+                top: CIRCLE_SIZE / 2,
+                bottom: CIRCLE_SIZE / 2,
+                width: 2,
+                zIndex: 0,
+              }}
+            />
 
-        <div className="hidden md:block relative">
-          
-
-          <div className="grid grid-cols-3 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                className="flex flex-col items-center gap-5 text-center px-4"
-              >
-                <div className="relative w-20 h-24 shrink-0">
+            <div className="flex flex-col" style={{ gap: STEP_GAP }}>
+              {steps.map((step) => (
+                <div
+                  key={step.number}
+                  className="flex items-center"
+                  style={{ gap: 20 }}
+                >
+                  {/* Circle — first in DOM = rightmost in RTL */}
                   <div
-                    className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 w-8 h-8 rounded-full border-2 ${step.borderColor} bg-white flex items-center justify-center`}
+                    className="shrink-0 rounded-full bg-[#009999] flex items-center justify-center"
+                    style={{
+                      width: CIRCLE_SIZE,
+                      height: CIRCLE_SIZE,
+                      zIndex: 10,
+                      position: "relative",
+                    }}
                   >
                     <span
-                      className={`text-sm font-bold ${step.textColor} font-cairo`}
+                      className="text-[#F5FFFF] font-bold"
+                      style={{ fontSize: 20, lineHeight: "28px" }}
                     >
                       {step.number}
                     </span>
                   </div>
 
-                  <div
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-3xl flex items-center justify-center"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    {step.icon}
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <h3 className="text-xl font-bold text-janbik-dark tracking-tight">
-                    {step.title}
-                  </h3>
-                  <p className="text-janbik-gray text-base leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div
-  className="absolute top-14.25 right-[calc(16.67%+40px)] left-[calc(16.67%+40px)] h-1.5 rounded-full"
-  
-  style={{
-    background:
-      "linear-gradient(90deg, #FF7A45 0%, #C099FF 50%, #16B9F2 100%)",
-  }}
-/>
-          {/* <div
-            className="absolute top-14.25 right-[calc(16.67%+40px)] left-[calc(16.67%+40px)] h-1.5 rounded-full"
-            dir="ltr"
-            style={{
-              background:
-                "linear-gradient(270deg, #FF7A45 0%, #C099FF 50%, #16B9F2 100%)",
-            }}
-          /> */}
-        </div>
-
-        <div className="md:hidden flex flex-col gap-10">
-          {steps.map((step, idx) => (
-            <div key={step.number} className="flex gap-4 items-start">
-              <div className="flex flex-col items-center shrink-0">
-                <div className="relative w-16 h-20">
-                  <div
-                    className={`absolute top-0 left-1/2 -translate-x-1/2 z-10 w-7 h-7 rounded-full border-2 ${step.borderColor} bg-white flex items-center justify-center`}
-                  >
-                    <span
-                      className={`text-xs font-bold ${step.textColor} font-cairo`}
+                  {/* Text — second in DOM = left of circle in RTL */}
+                  <div className="flex flex-col items-end gap-1 flex-1">
+                    <h3
+                      className="text-[#211F1C] font-bold text-right w-full"
+                      style={{ fontSize: 16, lineHeight: "24px" }}
                     >
-                      {step.number}
-                    </span>
-                  </div>
-                  <div
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-14 rounded-2xl flex items-center justify-center"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    <div className="scale-75">{step.icon}</div>
+                      {step.title}
+                    </h3>
+                    <p
+                      className="text-[#5F5954] font-normal text-right w-full"
+                      style={{ fontSize: 14, lineHeight: "20px" }}
+                    >
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-
-                {idx < steps.length - 1 && (
-                  <div
-                    className="w-1 flex-1 mt-2 rounded-full min-h-8"
-                    style={{ backgroundColor: step.color, opacity: 0.3 }}
-                  />
-                )}
-              </div>
-
-              <div className="flex-1 pt-8 pb-2 text-right">
-                <h3 className="text-lg font-bold text-janbik-dark mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-janbik-gray text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              ))}
             </div>
-          ))}
+            </div>
+
+            {/* ══ LEFT: Blob image with flower decorations ══ */}
+            <div className="relative flex justify-center">
+
+              {/* Main blob with SVG */}
+              <svg
+                viewBox="0 0 356 344"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-65 sm:w-77.5 lg:w-89 h-auto drop-shadow-sm"
+              >
+                <defs>
+                  <clipPath id="inner-blob-clip">
+                    <path d="M92.8184 64.7725C103.821 37.8157 132.912 22.9875 161.189 29.9219L261.23 54.4541C279.524 58.9402 294.556 71.9277 301.651 89.376L340.508 184.929C344.185 193.971 345.55 203.788 344.48 213.49L335.973 290.666C332.691 320.434 307.539 342.968 277.59 342.968H94.5205C76.0073 342.968 58.5771 334.239 47.4873 319.415L29.4785 295.342C17.1266 278.831 14.3367 257.051 22.1289 237.96L92.8184 64.7725Z" />
+                  </clipPath>
+                </defs>
+
+                {/* Outer cream fill + dark teal border */}
+                <path
+                  d="M88.3096 50.1299C99.8991 21.7355 130.541 6.11582 160.327 13.4199L265.615 39.2393C284.885 43.9645 300.719 57.6447 308.192 76.0234L349.087 176.589C352.96 186.113 354.398 196.453 353.271 206.673L344.317 287.896C340.861 319.253 314.366 342.987 282.82 342.987H90.1494C70.6488 342.987 52.2897 333.793 40.6084 318.179L21.6543 292.843C8.6436 275.451 5.70519 252.51 13.9131 232.4L88.3096 50.1299Z"
+                  fill="#FAF9F7"
+                  stroke="#005C5C"
+                  strokeWidth="1.20136"
+                />
+
+                {/* Room photo clipped to inner blob shape */}
+                <image
+                  href={ROOM_IMAGE}
+                  x="0"
+                  y="0"
+                  width="356"
+                  height="344"
+                  clipPath="url(#inner-blob-clip)"
+                  preserveAspectRatio="xMidYMid slice"
+                />
+
+                {/* Inner border on top of photo */}
+                <path
+                  d="M92.8184 64.7725C103.821 37.8157 132.912 22.9875 161.189 29.9219L261.23 54.4541C279.524 58.9402 294.556 71.9277 301.651 89.376L340.508 184.929C344.185 193.971 345.55 203.788 344.48 213.49L335.973 290.666C332.691 320.434 307.539 342.968 277.59 342.968H94.5205C76.0073 342.968 58.5771 334.239 47.4873 319.415L29.4785 295.342C17.1266 278.831 14.3367 257.051 22.1289 237.96L92.8184 64.7725Z"
+                  fill="none"
+                  stroke="#005C5C"
+                  strokeWidth="1.24039"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* ── CTA Button under row ── */}
+          <button
+            className="mt-2 bg-[#009999] text-[#F5FFFF] font-bold rounded-full inline-flex items-center justify-center gap-3 transition-colors hover:bg-[#007a7a] active:scale-95"
+            style={{
+              padding: "12px 24px",
+              fontSize: 14,
+              lineHeight: "20px",
+            }}
+          >
+            تسجل الآن
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden
+            >
+              <g clipPath="url(#btn-arrow-clip)">
+                <path
+                  d="M8.00065 12.6663L3.33398 7.99967L8.00065 3.33301"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M15.0654 8H3.33203"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="btn-arrow-clip">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
         </div>
       </div>
     </section>

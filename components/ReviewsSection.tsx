@@ -105,7 +105,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section className="py-12 px-4 sm:px-8 lg:px-14" dir="rtl">
+    <section className="py-12 px-4 sm:px-8 lg:px-14" dir="ltr">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
           <span className="text-[#111827]">

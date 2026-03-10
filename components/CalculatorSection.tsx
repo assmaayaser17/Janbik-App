@@ -22,6 +22,7 @@ function Slider({ label, value, min, max, onChange }: SliderProps) {
       </div>
       <div className="relative">
         <input
+          dir="ltr"
           type="range"
           min={min}
           max={max}
@@ -29,7 +30,7 @@ function Slider({ label, value, min, max, onChange }: SliderProps) {
           onChange={(e) => onChange(Number(e.target.value))}
           className="w-full h-2 rounded-full appearance-none cursor-pointer"
           style={{
-            background: `linear-gradient(to left, #009999 ${pct}%, #DDE4E2 ${pct}%)`,
+            background: `linear-gradient(to right, #009999 ${pct}%, #DDE4E2 ${pct}%)`,
           }}
         />
       </div>
@@ -50,16 +51,9 @@ export default function CalculatorSection() {
   const hoursSaved = Math.round(
     10 + (children / 200) * 40 + (employees / 50) * 15,
   );
-  const satisfaction = Math.min(
-    Math.round(70 + (children / 200) * 15),
-    95,
-  );
-  const savingsMin = Math.round(
-    (children * 80 + employees * 200) * 0.7,
-  );
-  const savingsMax = Math.round(
-    (children * 80 + employees * 200) * 1.3,
-  );
+  const satisfaction = Math.min(Math.round(70 + (children / 200) * 15), 95);
+  const savingsMin = Math.round((children * 80 + employees * 200) * 0.7);
+  const savingsMax = Math.round((children * 80 + employees * 200) * 1.3);
 
   return (
     <section
@@ -184,9 +178,12 @@ export default function CalculatorSection() {
                 <span className="text-[#009999] text-2xl font-bold">
                   {satisfaction}%
                 </span>
-                <div className="w-full h-2 rounded-full bg-[#DDE4E2] overflow-hidden">
+                <div
+                  className="w-full h-2 rounded-full bg-[#DDE4E2] overflow-hidden"
+                  dir="rtl"
+                >
                   <div
-                    className="h-full bg-[#009999] rounded-full transition-all"
+                    className="h-full  bg-[#009999] rounded-full transition-all"
                     style={{ width: `${satisfaction}%` }}
                   />
                 </div>
@@ -268,21 +265,6 @@ export default function CalculatorSection() {
                 href="#register"
                 className="inline-flex items-center gap-2 bg-[#009999] text-white font-bold text-sm px-8 py-3 rounded-full hover:bg-[#007A7A] transition-colors"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 1L15 8L8 15M15 8H1"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
                 احجز عرضًا توضيحيًا لمركزك
               </a>
             </div>
@@ -304,7 +286,7 @@ export default function CalculatorSection() {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: #009999;
+          background: white;
           cursor: pointer;
           border: 3px solid white;
           box-shadow: 0 0 0 1px #009999;
@@ -322,4 +304,3 @@ export default function CalculatorSection() {
     </section>
   );
 }
-

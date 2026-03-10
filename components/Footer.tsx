@@ -149,7 +149,7 @@ function NdiBadge() {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a6b6b] text-white font-cairo" dir="rtl">
+    <footer className="bg-[#0a6b6b] mt-8 text-white font-cairo" dir="rtl">
       {/* Main footer content */}
       <div className="max-w-500 mx-auto px-6 lg:px-14 pt-14 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">

@@ -84,7 +84,7 @@ export default function FaqSection() {
     <section
       id="faq"
       className="py-12 px-4 sm:px-8 lg:px-14 bg-transparent"
-      dir="rtl"
+      dir="ltr"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
