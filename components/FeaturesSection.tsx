@@ -86,26 +86,22 @@ export default function FeaturesSection() {
     <section
       id="features"
       dir="ltr"
-      className="w-full max-w-5xl mx-auto flex flex-col items-center gap-8 font-cairo py-16 px-4"
+      className="w-full max-w-6xl mx-auto flex flex-col items-center gap-8 md:gap-10 font-cairo py-10 md:py-14 lg:py-16 px-4 sm:px-6 lg:px-10"
     >
       <div className="flex flex-col items-center gap-4 text-center max-w-2xl w-full">
-        <h2 className="text-4xl font-black leading-tight tracking-tight text-[#2D3749]">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black leading-tight tracking-tight text-[#2D3749]">
           راحة بالك… قبل أي شيء
         </h2>
-        <p className="text-lg font-normal leading-7 text-[#65758B]">
+        <p className="text-sm md:text-base lg:text-lg font-normal leading-7 text-[#65758B]">
           لأنك في العمل، لا يعني أنك بعيد. جنبك تقرّبك من يوم طفلك خطوة بخطوة.
         </p>
       </div>
 
-      <div className="flex flex-col gap-4 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.slice(0, 3).map((feature, index) => (
+      <div className="w-full">
+        {/* Mobile / tablet: stacked column; desktop: 3-column grid */}
+        <div className="flex flex-col gap-3.5 md:gap-4 lg:grid lg:grid-cols-3 lg:gap-5">
+          {features.map((feature, index) => (
             <FeatureCard key={index} feature={feature} />
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {features.slice(3, 6).map((feature, index) => (
-            <FeatureCard key={index + 3} feature={feature} />
           ))}
         </div>
       </div>

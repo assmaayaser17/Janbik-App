@@ -298,4 +298,3 @@ function HeroSection() {
 export default function DashboardPreviewSection() {
   return <HeroSection />;
 }
-

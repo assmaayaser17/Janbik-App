@@ -2,13 +2,10 @@ export default function RegistrationFormSection() {
   return (
     <section
       dir="rtl"
-      className=" "
-      style={{
-        backgroundImage:
-          "linear-gradient(180deg, #FFF7EA 0%, #FFFDF8 40%, #FFFFFF 100%)",
-      }}
+      className="mt-5 py-10 "
+     
     >
-      <div className="max-w-5xl mx-auto flex flex-col items-center">
+      <div className="max-w-5xl mx-auto  flex flex-col items-center">
         <h2 className="text-center text-[22px] sm:text-2xl lg:text-[26px] font-black leading-snug tracking-tight text-[#111827] mb-10">
           جاهز نبدأ؟{" "}
           <span className="text-[#00A3A3]">سجّل بياناتك ورتّب كل شيء</span>

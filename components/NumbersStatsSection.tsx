@@ -83,10 +83,10 @@ const stats = [
 
 export default function NumbersStatsSection() {
   return (
-    <section className="py-12 px-4 sm:px-8 lg:px-14" dir="ltr">
-      <div className=" mx-auto">
-        <div className="flex flex-col items-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-black text-center leading-tight">
+    <section className="py-8 md:py-10 lg:py-12 px-4 sm:px-6 lg:px-10" dir="ltr">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col items-center mb-6 md:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-center leading-tight">
             <span className="text-[#1A2023]">
               الأرقام نتائج تُرى… لا تُقال.{" "}
             </span>
@@ -96,30 +96,30 @@ export default function NumbersStatsSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center justify-end gap-1 p-4 rounded-2xl border border-[#E8E6E3] bg-white shadow-sm"
+              className="flex flex-col items-center justify-end gap-1 p-3 sm:p-3.5 md:p-4 rounded-2xl border border-[#E8E6E3] bg-white shadow-sm"
             >
               <div className="flex flex-col items-center gap-3 mb-1">
                 {stat.icon}
                 <div className="flex items-center gap-1 justify-center">
                   <span
-                    className="text-2xl sm:text-3xl font-bold"
+                    className="text-lg sm:text-xl md:text-2xl font-bold"
                     style={{ color: stat.color }}
                   >
                     {stat.label}
                   </span>
                   <span
-                    className="text-2xl sm:text-3xl font-bold"
+                    className="text-lg sm:text-xl md:text-2xl font-bold"
                     style={{ color: stat.color }}
                   >
                     {stat.value}
                   </span>
                 </div>
               </div>
-              <p className="text-[#5C6970] text-xs sm:text-sm text-center">
+              <p className="text-[#5C6970] text-[10px] sm:text-xs md:text-sm text-center leading-relaxed">
                 {stat.desc}
               </p>
             </div>

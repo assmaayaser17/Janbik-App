@@ -15,7 +15,6 @@ import RegistrationFormSection from "@/components/RegistrationFormSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import ActivitiesSection from "@/components/ActivitiesSection";
 import RolesSection from "@/components/RolesSection";
-import OnboardingSection from "@/components/OnboardingSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import FaqSection from "@/components/FaqSection";
 
@@ -23,12 +22,12 @@ export default function Home() {
   return (
     <div
       className=""
-      // style={{
-      //   backgroundImage: "linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('/doodle-pattern.png')",
-      //   backgroundRepeat: "repeat",
-      //   backgroundAttachment: "fixed",
-      //   backgroundPosition: "center",
-      // }}
+      style={{
+        backgroundImage: "linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('/bg.png')",
+        backgroundRepeat: "repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+      }}
     >
       <HeroSection />
       <StatsSection />

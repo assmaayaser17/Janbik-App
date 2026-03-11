@@ -30,7 +30,7 @@ export default function HeroSection() {
       <div className=" ">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-8 ">
           {/* Image side */}
-          <div className="relative shrink-0 w-full max-w-135 mx-auto lg:mx-0">
+          <div className="hidden lg:block relative shrink-0 w-full max-w-135 mx-auto lg:mx-0">
             <div className="aspect-square  rounded-4xl border-8 border-white shadow-2xl overflow-hidden w-full">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/6426e16777481b3d3102dcd992157e769ca86405?width=1556"
@@ -180,4 +180,3 @@ export default function HeroSection() {
     </div>
   );
 }
-

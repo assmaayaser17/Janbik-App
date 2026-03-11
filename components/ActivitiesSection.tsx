@@ -24,7 +24,7 @@ function LeftActivityCard({
         <h3 className="text-[#111827] text-base md:text-lg font-bold leading-tight">
           {title}
         </h3>
-        <p className="text-[#2D3748] text-sm md:text-base font-normal leading-relaxed">
+        <p className="text-[#2D3748] text-base">
           {description}
         </p>
       </div>
@@ -42,7 +42,8 @@ function RightActivityCard({
   icon: ReactNode;
 }) {
   return (
-    <div className="flex flex-row items-start gap-4 lg:gap-5 justify-end">
+    <div className="flex flex-row items-start gap-4 lg:gap-5">
+      <IconBox>{icon}</IconBox>
       <div dir="rtl" className="flex flex-col gap-3 text-right flex-1">
         <h3 className="text-[#111827] text-base md:text-lg font-bold leading-tight">
           {title}
@@ -51,7 +52,6 @@ function RightActivityCard({
           {description}
         </p>
       </div>
-      <IconBox>{icon}</IconBox>
     </div>
   );
 }
@@ -113,21 +113,22 @@ function EducationalIcon() {
 export default function ActivitiesSection() {
   return (
     <section
-      className="w-full overflow-hidden font-cairo"
+      className="w-full  overflow-hidden font-cairo"
       style={{ background: "rgba(0, 153, 153, 0.05)" }}
     >
-      <div className="text-center pt-14 pb-0 px-4">
+      <div className="text-center  pt-10 md:pt-12 lg:pt-14 pb-0 px-4">
         <h2
           className="text-2xl md:text-3xl font-bold leading-relaxed"
-          dir="rtl"
+          dir="ltr"
         >
           <span className="text-[#111827]">أنشطة يومية تُنمّي طفلك من اللعب إلى التعلّم…</span>
           <span className="text-[#009999]"> كل نشاط له قيمة.</span>
         </h2>
       </div>
 
-      <div className="relative flex flex-col lg:flex-row items-center justify-center px-4 md:px-10 pb-10 gap-6 lg:gap-0">
-        <div className="flex flex-col gap-10 lg:gap-14 lg:w-85 xl:w-93.5 order-2 lg:order-1 w-full max-w-sm">
+      <div className="relative flex flex-col lg:flex-row items-stretch justify-center px-4 md:px-8 lg:px-10 pb-8 md:pb-10 gap-6 lg:gap-10 max-w-6xl mx-auto" dir="ltr">
+        {/* Left column activities */}
+        <div className="flex flex-col gap-6 md:gap-8 lg:gap-10 lg:w-80 xl:w-96 order-2 lg:order-1 w-full max-w-xl mx-auto lg:mx-0">
           <LeftActivityCard
             title="الفنون والحرف اليدوية"
             description="استكشاف الألوان والأشكال والقوام أثناء تطوير الإبداع والمهارات الحركية الدقيقة."
@@ -145,36 +146,18 @@ export default function ActivitiesSection() {
           />
         </div>
 
-        <div className="relative shrink-0 order-1 lg:order-2 lg:mx-6 xl:mx-10">
-          {/* <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/5ec1a6e6ede42389f65a434a22fc2847dc95fca4?width=179"
-            alt=""
-            className="absolute w-20 md:w-24 lg:w-28"
-            style={{
-              transform: "rotate(-162deg)",
-              top: "10%",
-              left: "-10px",
-            }}
-          /> */}
+        {/* Center photo — visible only on desktop for lighter mobile/tablet layout */}
+        <div className="relative shrink-0 order-1 lg:order-2 lg:mx-6 xl:mx-10 hidden lg:block">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1f775948abc24cf9bf6380112b1fe5b98796cdbb?width=179"
-            alt=""
-            className="absolute w-20 md:w-24 lg:w-28"
-            style={{
-              transform: "rotate(18deg)",
-              top: "10%",
-              right: "-10px",
-            }}
-          />
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/f30991f1aa7bb8128a78af779ef3c7aa26a4f256?width=952"
+            src="./child.png"
             alt="طفل"
-            className="relative z-10 w-64 sm:w-72 md:w-80 lg:w-[380px] xl:w-[420px] object-contain"
+            className="relative z-10 w-56 sm:w-64 md:w-72 lg:w-80 xl:w-[420px] object-contain"
             style={{ marginTop: "20px" }}
           />
         </div>
 
-        <div className="flex flex-col gap-10 lg:gap-14 lg:w-[340px] xl:w-[344px] order-3 w-full max-w-sm">
+        {/* Right column activities */}
+        <div className="flex flex-col gap-6 md:gap-8 lg:gap-10 lg:w-80 xl:w-86 order-3 w-full max-w-xl mx-auto lg:mx-0">
           <RightActivityCard
             title="اللعب في الهواء الطلق"
             description="وقت لعب آمن يشجع النشاط البدني والعمل الجماعي والمهارات الاجتماعية."

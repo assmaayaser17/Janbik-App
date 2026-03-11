@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-500 mx-auto px-6 lg:px-14 h-24 flex items-center justify-between">
+      <div className=" mx-auto px-4 md:px-6 lg:px-10 h-16 md:h-20 lg:h-24 flex items-center justify-between">
         {/* Logo — rightmost in RTL */}
         <Link href="/" className="shrink-0" aria-label="العودة للصفحة الرئيسية">
           <img
@@ -26,8 +26,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav Links (show from lg and up so tablet uses dropdown) */}
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -39,8 +39,8 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Action Buttons — leftmost in RTL */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Desktop Action Buttons — leftmost in RTL (lg and up) */}
+        <div className="hidden lg:flex items-center gap-4">
           {/* تواصل معنا — outlined button */}
           <button className="flex items-center gap-3 h-10 px-4 rounded-full border border-[#E5E7EB] bg-[#F9FAFB] text-[#2D3749] text-sm font-bold leading-5 hover:bg-gray-100 transition-colors font-cairo whitespace-nowrap">
             <span>تواصل معنا</span>
@@ -95,9 +95,9 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile / Tablet hamburger (shown below lg) */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="فتح القائمة"
         >
@@ -119,9 +119,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile / Tablet Menu (below lg) */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}

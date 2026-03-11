@@ -29,13 +29,7 @@ function InstagramIcon() {
     >
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <circle cx="12" cy="12" r="4" />
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="0.5"
-        fill="currentColor"
-        stroke="none"
-      />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -150,8 +144,7 @@ function NdiBadge() {
 export default function Footer() {
   return (
     <footer className="bg-[#0a6b6b] mt-8 text-white font-cairo" dir="rtl">
-      
-      <div className="max-w-500 mx-auto px-6 lg:px-14 pt-14 pb-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 sm:pt-12 lg:pt-14 pb-8 sm:pb-10 lg:pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column — rightmost in RTL */}
           <div className="flex flex-col gap-5 sm:col-span-2 lg:col-span-1">
@@ -167,14 +160,14 @@ export default function Footer() {
             </p>
             {/* Social icons */}
             <div className="flex items-center gap-3 mt-1">
-               <a
+              <a
                 href="#"
                 aria-label="تويتر X"
                 className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[#005C5C] hover:bg-white/25 transition-colors"
               >
                 <XIcon />
               </a>
-                <a
+              <a
                 href="#"
                 aria-label="إنستغرام"
                 className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[#005C5C] hover:bg-white/25 transition-colors"
@@ -188,8 +181,6 @@ export default function Footer() {
               >
                 <LinkedInIcon />
               </a>
-            
-             
             </div>
           </div>
 
@@ -285,24 +276,21 @@ export default function Footer() {
 
       {/* Divider + Bottom bar */}
       <div className="border-t border-white/15">
-        <div className="max-w-500 mx-auto px-6 lg:px-14 py-5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-4 sm:py-5">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-             {/* Right side in RTL — NDI badge */}
+            {/* Right side in RTL — NDI badge */}
             <div className="flex items-center gap-4">
               <div className=" flex  justify-center items-center gap-3 text-right">
-                 <NdiBadge />
-                 <div>
+                <NdiBadge />
+                <div>
                   <p className="text-white font-bold text-base leading-tight">
-                  البنية الوطنية الرقمية
-                </p>
-                <p className="text-white/55 text-xs tracking-widest mt-0.5">
-                  NATIONAL DIGITAL INFRASTRUCTURE
-                </p>
-
-                 </div>
-                
+                    البنية الوطنية الرقمية
+                  </p>
+                  <p className="text-white/55 text-xs tracking-widest mt-0.5">
+                    NATIONAL DIGITAL INFRASTRUCTURE
+                  </p>
+                </div>
               </div>
-             
             </div>
             {/* Left side in RTL — copyright */}
             <div className="flex flex-col gap-1">
@@ -324,12 +312,9 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-
-           
           </div>
         </div>
       </div>
     </footer>
   );
 }
-

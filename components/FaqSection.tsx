@@ -42,9 +42,10 @@ function FaqItem({ question }: FaqItemProps) {
 
   return (
     <div className="border border-[#E5E7EB] bg-[#F9FAFB] rounded-xl overflow-hidden">
-      <button
+       <button
         className="w-full flex items-center justify-between px-4 py-3 text-right"
         onClick={() => setOpen(!open)}
+        dir="ltr"
       >
         <svg
           width="16"
@@ -84,32 +85,35 @@ export default function FaqSection() {
     <section
       id="faq"
       className="py-12 px-4 sm:px-8 lg:px-14 bg-transparent"
-      dir="ltr"
+      dir="rtl"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className=" md:max-w-7xl lg:w-full  mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          <div className="flex-1 flex flex-col gap-3 order-2 lg:order-1">
+          <div className="flex flex-col gap-3 order-2 lg:order-1 
+                w-full max-w-md mx-auto 
+                lg:max-w-none lg:mx-0 lg:flex-1">
             {faqs.map((faq) => (
               <FaqItem key={faq.q} question={faq.q} />
             ))}
           </div>
 
-          <div className="lg:w-80 xl:w-96 flex flex-col items-end gap-3 order-1 lg:order-2">
-            <h2 className="text-[#211F1C] text-3xl font-bold text-right">
-              الأسئلة الشائعة
-            </h2>
-            <p className="text-[#6B7280] text-base text-right">
-              كل ما تحتاج لمعرفته: الأسئلة الشائعة حول جنبك
-            </p>
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/c2f333f3a770b09402f2f2589639abe76b3e658b?width=602"
-              alt="FAQ illustration"
-              className="w-64 h-auto mt-4"
-            />
-          </div>
+     <div className="text-center lg:text-right mx-auto lg:mx-0 max-w-md">
+  <h2 className="text-[#211F1C] text-3xl font-bold">
+    الأسئلة الشائعة
+  </h2>
+
+  <p className="text-[#6B7280] text-base">
+    كل ما تحتاج لمعرفته: الأسئلة الشائعة حول جنبك
+  </p>
+
+  <img
+    src="https://api.builder.io/api/v1/image/assets/TEMP/c2f333f3a770b09402f2f2589639abe76b3e658b?width=602"
+    alt="FAQ illustration"
+    className="w-64 hidden lg:block h-auto mt-4"
+  />
+</div>
         </div>
       </div>
     </section>
   );
 }
-
