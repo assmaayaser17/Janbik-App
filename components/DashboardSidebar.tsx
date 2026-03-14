@@ -40,7 +40,7 @@ export default function DashboardSidebar() {
       {/* Desktop / Tablet sidebar (right side) */}
       <aside
         dir="rtl"
-        className={`min-h-screen inset-y-0 right-0 z-40 hidden  flex-col border-l bg-white shadow-sm transition-all duration-300 ease-in-out lg:flex ${
+        className={`min-h-screen inset-y-0 right-0 z-40 hidden  flex-col  bg-white shadow-sm transition-all duration-300 ease-in-out lg:flex ${
           collapsed ? "w-18" : "w-65"
         }`}
       >
