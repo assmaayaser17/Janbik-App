@@ -11,7 +11,7 @@ export default function TopHeader() {
         <div className="relative">
           <div className="w-10 h-10 rounded-full bg-[#00A79E1A] overflow-hidden flex items-center justify-center">
             <img
-              src="https://api.dicebear.com/7.x/avataaars/svg?seed=abdulilah&backgroundColor=c0aede"
+              src="/Billing Department.png"
               alt="عبد الإله العمري"
               className="w-full h-full object-cover"
             />
