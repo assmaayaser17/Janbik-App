@@ -3,11 +3,60 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --card: #ffffff;
+  --card-foreground: #111827;
+
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+
+  --primary: hsl(170, 60%, 42%);
+  --primary-foreground: #ffffff;
+  --secondary: #F3F4F6;
+
+  --icon-daily: #D97706;
+  --icon-weekly: #2563EB;
+  --icon-monthly: #DB2777;
+  --icon-license: #DC2626;
+
+  --attendance-present: hsl(166, 60%, 42%);
+  --attendance-present-foreground: #ffffff;
+  --attendance-absent: hsl(220, 10%, 75%);
+  --attendance-late: hsl(38, 92%, 50%);
+
+  --teal: #00A79E;
+  --chart-orange: #F97316;
+  --chart-teal-dark: hsl(170, 55%, 32%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+
+  --color-icon-daily: var(--icon-daily);
+  --color-icon-weekly: var(--icon-weekly);
+  --color-icon-monthly: var(--icon-monthly);
+  --color-icon-license: var(--icon-license);
+
+  --color-teal: var(--teal);
+  --color-chart-orange: var(--chart-orange);
+  --color-chart-teal-dark: var(--chart-teal-dark);
+
+  --color-attendance-present: var(--attendance-present);
+  --color-attendance-present-foreground: var(--attendance-present-foreground);
+  --color-attendance-absent: var(--attendance-absent);
+  --color-attendance-late: var(--attendance-late);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
